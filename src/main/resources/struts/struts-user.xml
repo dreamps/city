@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <include file="com/baizhi/ps/struts/struts-front.xml"></include>
+    <!-- 配置访问路径 -->
+    <package name="user" extends="struts-default" namespace="/user">
+        <action name="*" class="com.baizhi.ps.action.UserAction" method="{1}">
+            <result name="login" type="redirectAction">
+                <param name="namespace">/front</param>
+                <param name="actionName">select</param>
+            </result>
+            <result name="register">/front/user/register_form.jsp</result>
+            <result name="no">/front/user/login_form.jsp</result>
+            <result name="verify">/front/user/verify_form.jsp</result>
+            <result name="code">/front/user/register_ok.jsp</result>
+            <result name="update">/front/user/register_ok.jsp</result>
+        </action>
+    </package>
+
+</struts>

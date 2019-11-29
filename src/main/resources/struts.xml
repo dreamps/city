@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 配置访问路径 -->
+    <package name="select" extends="struts-default" namespace="/select">
+        <action name="province" class="com.baizhi.controller.ProvinceAction" method="selectAllProvince"></action>
+        <action name="city" class="com.baizhi.controller.CityAction" method="selectCity"></action>
+        <action name="area" class="com.baizhi.controller.AreaAction" method="selectArea"></action>
+    </package>
+
+
+</struts>
